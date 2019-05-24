@@ -2,15 +2,15 @@
 If you use autohide dock feature on macOS you must notice how slow it is. This is a quick fix to this issue. 
 
 ## Solution to the problem
-> defaults write com.apple.dock autohide-delay -float 0;
+Open terminal no macOS and paste this code:
+```
+defaults write com.apple.dock autohide-delay -float 0;
+defaults write com.apple.dock autohide-time-modifier -float 0.36;
+killall Dock
+```
+Click enter. That's it.
 
-This code changes the star value of appearing dock to 0
-
-> defaults write com.apple.dock autohide-time-modifier -float 0.36;   
-
-This code changes the multiplier value of animation hide dock. You can modify 0.36 to a number that suits your needs.
-
-After that you can log out and log in or paste the simple command:
-> killall Dock
-
-Remember: changes appear after you reset Dock!
+## Explanation
+You can think about what this piece of code does. So, the first part of the code changes the star value of appearing dock to 0.
+The second part changes the multiplier value of animation hide dock. You can modify 0.36 to a number that suits your needs. 10 really slow, 0 instant.
+After that, you can log out and log in to see changes or as in the example above paste the simple command to reset Dock.
