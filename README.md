@@ -3,7 +3,7 @@
 ## Problem with the dock 
 If you use autohide dock feature on macOS you must notice how slow it is. This is a quick fix to this issue. 
 
-## Solution to the problem
+## Solution to the problem \#1
 Open terminal on macOS and paste this code:
 ```
 defaults write com.apple.dock autohide-delay -float 0;
@@ -11,6 +11,9 @@ defaults write com.apple.dock autohide-time-modifier -float 0.36;
 killall Dock
 ```
 Click enter and that's it.
+
+## Solution to the problem \#2
+Download file: fix-dock.sh and click on it.
 
 ## Explanation
 You can think about what this piece of code does. 
