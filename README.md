@@ -13,7 +13,7 @@ killall Dock
 Click enter and that's it.
 
 ## Solution to the problem \#2
-Download file: fix-dock.sh and click on it.
+Download file: fix-dock.sh and double click on it.
 
 ## Explanation
 You can think about what this piece of code does. 
