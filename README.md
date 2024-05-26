@@ -1,24 +1,26 @@
-# Fix the dock on macOS
+# Fix the Dock on macOS
 
-## Problem with the dock 
-If you use autohide dock feature on macOS you must notice how slow it is. This is a quick fix to this issue. 
+## Problem with the Dock
 
-## Solution to the problem \#1
-Open terminal on macOS and paste this code:
-```
+If you use the autohide dock feature on macOS, you may have noticed how slow it is. This guide provides a quick fix for this issue.
+
+## Solution #1
+
+Open the Terminal on macOS and paste the following commands:
+
+```sh
 defaults write com.apple.dock autohide-delay -float 0;
 defaults write com.apple.dock autohide-time-modifier -float 0.36;
 killall Dock
 ```
-Click enter and that's it.
+Press Enter, and that’s it.
 
 ## Solution to the problem \#2
-Download file: fix-dock.sh and double click on it.
+Download the fix-dock.sh file and double-click on it.
 
 ## Explanation
-You can think about what this piece of code does. 
+Here’s a brief explanation of what the code does:
 
-So, the first part of the code changes the star value of appearing dock to 0.
-The second part changes the multiplier value of animation hide dock. 
-You can modify 0.36 to a number that suits your needs (10 - really slow, 1 - normal, 0 - instant)
-After that, you can log out and log in to see changes or as in the example above paste the simple command to reset Dock.
+	1.	defaults write com.apple.dock autohide-delay -float 0: Sets the autohide delay for the dock to 0, making it appear instantly.
+	2.	defaults write com.apple.dock autohide-time-modifier -float 0.36: Changes the animation speed for hiding the dock. You can modify 0.36 to a value that suits your needs (e.g., 10 for very slow, 1 for normal, 0 for instant).
+	3.	killall Dock: Restarts the Dock to apply the changes immediately. Alternatively, you can log out and log back in to see the changes.
